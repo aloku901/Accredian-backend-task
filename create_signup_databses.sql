@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS signup;
+
+USE signup;
+
+CREATE TABLE IF NOT EXISTS login (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    password VARCHAR(30) NOT NULL
+);
+
+
+ALTER TABLE login
+ADD CONSTRAINT unique_email UNIQUE (email);
+
+
+
